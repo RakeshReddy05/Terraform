@@ -7,7 +7,7 @@ apt update
 apt install -y apache2
 
 # Get the instance ID from the instance metadata
-INSTANCE_ID=$(curl -s http://169.254.169.254/latest/meta-data/instance-id)
+#INSTANCE_ID=$(curl -s http://169.254.169.254/latest/meta-data/instance-id)
 
 apt install -y awscli
 
@@ -23,9 +23,8 @@ cat <<EOF > /var/www/html/index.html
     </style>
 </head>
 <body>
-    <h1>Welcome to Your AWS Ubuntu Micro Instance!</h1>
+    <h1>Welcome to Your AWS Ubuntu Micro Instance2!</h1>
     <p>This is a simple web page served by NGINX on your AWS Ubuntu micro instance.</p>
-    <h2>Instance ID: <span style="color:green">$INSTANCE_ID</span></h2>
 </body>
 </html>
 EOF
